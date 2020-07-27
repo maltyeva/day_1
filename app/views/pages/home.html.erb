@@ -1,0 +1,13 @@
+<h1>Home 🏠</h1>
+<% @members.each do |member| %>
+  <ul>
+    <li><%= member %></li>
+  </ul>
+<% end %>
+<%= link_to "About Us", about_path %>
+<form action="/contact" method="GET">
+  <input type="text" name="member" placeholder="who are you looking for">
+  <input type="submit">
+</form>
+<!-- link_to "thing you click on", prefix_path -->
+<!-- <a href="/about">About Us </a> -->
