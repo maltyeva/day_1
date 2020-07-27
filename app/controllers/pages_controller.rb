@@ -6,8 +6,11 @@ class PagesController < ApplicationController
 
   def contact
     @member = params[:member]
+    @batch = params[:batch]
     @members = ['pavel', 'pavel2', 'thibault', 'maria', 'audrey']
-    @members = @members.select { |member| member.starts_with?(@member)}
+    if @member
+      @members = @members.select { |member| member.starts_with?(@member)}
+    end
   end
 
   def home
